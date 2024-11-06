@@ -15,6 +15,20 @@ Some games will run in any postgres client, some will require `psql` terminal.
 - [2048](#2048)
 - [Flappybird](#flappybird)
 
+### Input tool
+
+In tools folder you can find `input.bash` script that is used to send input to database.
+It interacts with made by me `get_key()` function that will handle keyborad input.
+
+For now it works with flappybird game, replacing second terminal used to send jump command.
+In flappybird game you can use `arrow up` to jump.
+
+To use `input.bash` run it as it was `psql` command, for example:
+
+```bash
+./tools/inputs.bash -U postgres -p 5432 -h 127.0.0.1
+```
+
 ### 2024
 
 _Will run in any postgres client_

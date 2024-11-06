@@ -157,6 +157,18 @@ BEGIN
 END
 $$;
 
+CREATE or replace FUNCTION get_key(k TEXT)
+RETURNS TEXT language plpgsql AS $$
+BEGIN
+    IF k = '[A' THEN
+        CALL jump();
+        RETURN 'Jump!';
+    END IF;
+    RETURN 'Unused key: "' || k || '"';
+END
+$$;
+
+
 CREATE or replace FUNCTION draw()
 RETURNS TEXT language plpgsql AS $$
 DECLARE
