@@ -1,4 +1,6 @@
 .vscode
-tests.sql
+
 .envrc
 .direnv
+
+tests.sql
