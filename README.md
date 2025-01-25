@@ -14,6 +14,7 @@ Some games will run in any postgres client, some will require `psql` terminal.
 
 - [2048](#2048)
 - [Flappybird](#flappybird)
+- [Wordle](#wordle)
 
 ### Input tool
 
@@ -56,6 +57,18 @@ Flappybird in sql. To run you need to run from `psql` termianl.
 2. Import `flappybird.sql` (eq. `\i flappybird.sql`)
 3. Run `CALL start()`
 4. From other terminal or some other postgres client run query `CALL jump()` to jump.
+
+### Wordle
+
+_Requires psql client_
+
+Wordle game in sql. To run you need to run from `psql` termianl.
+
+1. Launch psql: `psql -U postgres -p 5432 -h 127.0.0.1`
+2. Import `wordle.sql` (eq. `\i wordle.sql`)
+3. Import word list from `wordle_words.sql` (eq. `\i wordle_words.sql`)
+4. Run `CALL play()` and then `CALL play('word')` to guess word.
+5. To reset just run `CALL play()` again.
 
 ### Cool sources and resources I used
 
